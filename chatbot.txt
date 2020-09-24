@@ -1,0 +1,11 @@
+order pizza
+you can order a pizza by typing order pizza.
+
+pizza types
+there are two types of pizza veg and nveg.
+
+pizza size
+there are regular, medium, large pizza .
+
+init order
+you can intialize the order by "order init"

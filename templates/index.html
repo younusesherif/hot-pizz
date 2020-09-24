@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Automated Healthcare Chatbot</h1>
+    <div>
+      <div id="chatbox">
+        <p class="botText"><span>Please try typing full sentences as I am still learning!</span></p>
+        <p class="botText"><span>I am a chatbot. You can begin conversation by typing in a message and pressing enter.</span></p>
+        <p class="botText"><span>Hi There! What is your name?</span></p>
+      </div>
+      <div id="userInput">
+        <input id="textInput" type="text" name="msg" placeholder="Message">
+        <input id="buttonInput" type="submit" value="Send">
+      </div>
+      <script>
+        var orderinit=false;
+        var pizza=false;
+        var type=false;
+        var size=false;
+        var count=false;
+        var contact=false;
+        var names=false;
+        var mob=false;
+        var address=false;
+        order={};
+        function makeid(length) {
+          var result           = '';
+          var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          var charactersLength = characters.length;
+          for ( var i = 0; i < length; i++ ) {
+              result += characters.charAt(Math.floor(Math.random() * charactersLength));
+          }
+          return result;
+        }
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          console.log(rawText);
+          if(rawText === "order pizza")
+          {
+            orderinit=true;
+            console.log("order initialied")
+            var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+            $("#textInput").val("");
+            $("#chatbox").append(userHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            var botHtml = '<p class="botText"><span>Enter a or b for veg or non veg</span></p>';
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          }
+          if(orderinit===true)
+          {
+            if(pizza===false)
+            {
+              if(type===false)
+              {
+                if(rawText.toUpperCase()==='A')
+                {
+                  order["type"]="veg";
+                  type=true;
+
+                  var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                  $("#textInput").val("");
+                  $("#chatbox").append(userHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                  var botHtml = '<p class="botText"><span>Enter a or b or c for regular, medium, large</span></p>';
+                  $("#chatbox").append(botHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                }
+                else if(rawText.toUpperCase()==='B')
+                {
+                  order["type"]="Non veg";
+                  type=true;
+
+                  var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                  $("#textInput").val("");
+                  $("#chatbox").append(userHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                  var botHtml = '<p class="botText"><span>Enter a or b or c for regular, medium, large</span></p>';
+                  $("#chatbox").append(botHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                }
+                else
+                {
+                  console.log("enter correct options");
+                }
+              }
+              else if(size===false)
+              {
+                if(rawText.toUpperCase()==='A')
+                {
+                  order["size"]="regular";
+                  size=true;
+
+                  var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                  $("#textInput").val("");
+                  $("#chatbox").append(userHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                  var botHtml = '<p class="botText"><span>Enter number of pizza</span></p>';
+                  $("#chatbox").append(botHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                }
+                else if(rawText.toUpperCase()==='B')
+                {
+                  order["size"]="medium";
+                  size=true;
+
+                  var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                  $("#textInput").val("");
+                  $("#chatbox").append(userHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                  var botHtml = '<p class="botText"><span>Enter number of pizza</span></p>';
+                  $("#chatbox").append(botHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                }
+                else if(rawText.toUpperCase()==='C')
+                {
+                  order["size"]="small";
+                  size=true;
+
+                  var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                  $("#textInput").val("");
+                  $("#chatbox").append(userHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                  var botHtml = '<p class="botText"><span>Enter number of pizza</span></p>';
+                  $("#chatbox").append(botHtml);
+                  document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                }
+                else
+                {
+                  console.log("enter correct option")
+                }
+              }
+              else if(count===false)
+              {
+                console.log(parseInt(rawText))
+                order["count"]=parseInt(rawText);
+                count=true
+                pizza=true
+
+                var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                $("#textInput").val("");
+                $("#chatbox").append(userHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                var botHtml = '<p class="botText"><span>Enter your name</span></p>';
+                $("#chatbox").append(botHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+              }
+            }
+            else if(pizza===true && contact===false)
+            {
+              if(names===false)
+              {
+                order["name"]=rawText;
+                names=true;
+
+                var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                $("#textInput").val("");
+                $("#chatbox").append(userHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                var botHtml = '<p class="botText"><span>Enter your number</span></p>';
+                $("#chatbox").append(botHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+              }
+              else if(mob===false)
+              {
+                order["mob"]=parseInt(rawText);
+                mob=true
+
+                var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                $("#textInput").val("");
+                $("#chatbox").append(userHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                var botHtml = '<p class="botText"><span>Enter your address</span></p>';
+                $("#chatbox").append(botHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+              }
+              else if(address===false)
+              {
+                order["address"]=rawText
+                address=true
+                contact=true
+
+                var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+                $("#textInput").val("");
+                $("#chatbox").append(userHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                var orderid=makeid(5);
+                var botHtml = '<p class="botText"><span>your order ID is '+orderid+'</span></p>';
+                $("#chatbox").append(botHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                order["orderid"]=orderid;
+              }
+            }
+            if(pizza===true && contact===true)
+            {
+              $.get("/order", { msg:JSON.stringify(order) }).done(function(data) {
+              var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+              $("#chatbox").append(botHtml);
+              document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            });
+              orderinit=false
+            }
+            console.log(order);
+          }
+          else
+          {
+            var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+            $("#textInput").val("");
+            $("#chatbox").append(userHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            $.get("/get", { msg: rawText }).done(function(data) {
+              var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+              $("#chatbox").append(botHtml);
+              document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            });
+          }
+
+        }
+        $("#textInput").keypress(function(e) {
+            if(e.which == 13) {
+                getBotResponse();
+            }
+        });
+        $("#buttonInput").click(function() {
+          getBotResponse();
+        })
+      </script>
+    </div>
+  </body>
+</html>
