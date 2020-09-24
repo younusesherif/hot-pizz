@@ -1,7 +1,27 @@
-body {
-    font-family: Garamond;
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+    /* The image used */
+  
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.title{
+    height: auto;
+    width: auto;
+    padding: 5px;
+    background-color: cornflowerblue;
 }
-
+/* .card{
+    padding-top: 280px;
+} */
 h1 {
     color: black;
     margin-bottom: 0;
@@ -30,6 +50,43 @@ h3 {
     width: 40%;
     margin-top: 60px;
 }
+input[type=text]{
+    height: 50px;
+    width: 50px;
+    background: transparent;
+}
+input[type=submit]{
+    height: 50px;
+    width: 60px;
+}
+input:focus {
+    outline: none;
+  }
+@media only screen and (max-width: 768px) {
+
+    #chatbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 60px;
+    }
+    #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 60px;
+    }
+    input[type=text]{
+        height: 50px;
+        width: 40px;
+    }
+    input[type=submit]{
+        height: 50px;
+        width: 50px;
+    }
+}
+
+
 
 #textInput {
     width: 87%;
@@ -43,6 +100,7 @@ h3 {
     padding: 3px;
     font-family: monospace;
     font-size: 17px;
+
 }
 
 .userText {

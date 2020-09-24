@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <h1>Automated Healthcare Chatbot</h1>
-    <div>
-      <div id="chatbox">
+    <div class="bg">
+    <h1 class="title">hot-pizz</h1>
+    <div class="card">
+      <div id="chatbox" class="">
         <p class="botText"><span>Please try typing full sentences as I am still learning!</span></p>
         <p class="botText"><span>I am a chatbot. You can begin conversation by typing in a message and pressing enter.</span></p>
-        <p class="botText"><span>Hi There! What is your name?</span></p>
       </div>
-      <div id="userInput">
+      <div id="userInput" class="">
         <input id="textInput" type="text" name="msg" placeholder="Message">
         <input id="buttonInput" type="submit" value="Send">
       </div>
@@ -39,7 +41,7 @@
         function getBotResponse() {
           var rawText = $("#textInput").val();
           console.log(rawText);
-          if(rawText === "order pizza")
+          if(rawText === "order pizza" || rawText==="Order pizza")
           {
             orderinit=true;
             console.log("order initialied")
@@ -230,5 +232,6 @@
         })
       </script>
     </div>
+  </div>
   </body>
 </html>
