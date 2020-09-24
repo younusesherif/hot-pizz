@@ -63,9 +63,6 @@ input:focus {
 @media only screen and (max-width: 768px) {
 
 }
-
-
-
 #textInput {
     border: none;
     border-bottom: 3px solid #009688;

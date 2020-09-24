@@ -9,6 +9,117 @@
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+    /* The image used */
+  
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.title{
+    height: auto;
+    width: auto;
+    padding: 5px;
+    background-color: rgb(160, 103, 246);
+}
+/* .card{
+    padding-top: 280px;
+} */
+h1 {
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    color: black;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+#chatbox {
+    width: 100%;
+    margin-top: 60px;
+}
+
+#userInput {
+    width: 100%;
+    margin-top: 60px;
+}
+input[type=text]{
+    height: 50px;
+    width: 100%;
+    background: transparent;
+}
+input[type=submit]{
+    height: 50px;
+    width: 100%;
+}
+input:focus {
+    outline: none;
+  }
+#textInput {
+    border: none;
+    border-bottom: 3px solid #009688;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+#buttonInput {
+    padding: 3px;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+.userText {
+  margin-top: 15px;
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.userText span {
+    background-color: #595c5c;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.botText {
+  margin-top: 15px;
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.botText span {
+    background-color: #6e90ee;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+#tidbit {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 300px;
+}
+    </style>
   </head>
   <body>
     <div class="bg">
