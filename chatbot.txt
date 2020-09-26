@@ -8,4 +8,4 @@ pizza size
 there are regular, medium, large pizza .
 
 init order
-you can intialize the order by "order init"
+you can intialize the order by "order init" or "order pizza"
