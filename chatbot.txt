@@ -1,5 +1,5 @@
 order pizza
-you can order a pizza by typing order pizza.
+you can order a pizza by typing "order pizza" or "order init".
 
 pizza types
 there are two types of pizza veg and nveg.
@@ -8,4 +8,13 @@ pizza size
 there are regular, medium, large pizza .
 
 init order
-you can intialize the order by "order init" or "order pizza"
+you can intialize the order by "order init" or "order pizza
+
+pizza status
+you can check your pizza status by your orderID 
+
+pizza help
+we provide ordering pizza by virtual assistant
+
+who you
+im a virtual assistant to help you by orderring pizza you start order by type "order pizza" or "order init"
