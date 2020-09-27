@@ -8,14 +8,17 @@ pizza size
 there are regular, medium, large pizza .
 
 init order
-you can intialize the order by "order init" or "order pizza
+you can intialize the order by "order init" or "order pizza.
 
 pizza status
-you can check your pizza status by your orderID 
+you can check your pizza status by your orderID .
 
 pizza help
-we provide ordering pizza by virtual assistant
+we provide ordering pizza by virtual assistant.
 
-who are you im a virtual assistant to help you by orderring pizza you start order by type "order pizza" or "order init"
 
-how are you fine how's you
+who are you
+im a virtual assistant to help you by orderring pizza you start order by type "order pizza" or "order init".
+
+how are you
+fine how's you.
