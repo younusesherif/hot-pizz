@@ -157,6 +157,8 @@ input:focus {
         function getBotResponse() {
           var rawText = $("#textInput").val();
           console.log(rawText);
+          if(rawText!=="")
+          {
           if(rawText === "order pizza" || rawText==="Order pizza" || rawText==="Order init" || rawText==="order init")
           {
             orderinit=true;
@@ -338,6 +340,7 @@ input:focus {
           }
 
         }
+      }
         $("#textInput").keypress(function(e) {
             if(e.which == 13) {
                 getBotResponse();
