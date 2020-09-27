@@ -81,7 +81,7 @@ def orderplaced():
   collection=request.args.get('msg')
   py_obj = json.loads(collection)
   records.insert_one(py_obj)
-  response="your order has been placed please check with orderID for status of order"
+  response="ROBO: your order has been placed please check with orderID for status of order"
   return response
 @app.route('/get', methods = ['get'])
 def signup():
@@ -105,7 +105,7 @@ def signup():
               mydoc = records.find({"orderid":p})
               for x in mydoc:
                 print(x)
-                response="you ordered "+str(x["count"])+" "+x["size"]+" "+x["type"]+" pizza we are reaching you at "+x["address"]
+                response="ROBO: you ordered "+str(x["count"])+" "+x["size"]+" "+x["type"]+" pizza we are reaching you at "+x["address"]
             else:
               response=("ROBO: "+responsing(user_response))
               sent_tokens.remove(user_response)
