@@ -17,8 +17,5 @@ pizza help
 we provide ordering pizza by virtual assistant.
 
 
-who are you
-im a virtual assistant to help you by orderring pizza you start order by type "order pizza" or "order init".
 
-how are you
-fine how's you.
+

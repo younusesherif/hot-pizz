@@ -92,6 +92,10 @@ def signup():
     if(user_response!='bye'):
       if(user_response=='thanks' or user_response=='thank you' ):
         response="ROBO: You are welcome.."
+      elif(user_response == 'how are you'):
+        response="ROBO: fine how's you."
+      elif(user_response =='who are you'):
+        response="ROBO: im a virtual assistant to help you by orderring ."
       else:
         if(greeting(user_response)!=None):
           response="ROBO: "+greeting(user_response)
