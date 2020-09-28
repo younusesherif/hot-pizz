@@ -6,10 +6,10 @@ This is Chatbot implementing NLP by **Python-NLTK**.
 python
 
 ## Prerequisite
-python-NLTK
-python-Flask
-HTML & CSS
-JavaScript
+- python-NLTK
+- python-Flask
+- HTML & CSS
+- JavaScript
 
 
 |STEPS                |DESCRIPTION
